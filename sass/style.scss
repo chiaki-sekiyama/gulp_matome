@@ -20,6 +20,7 @@ $imgpath: "../img/";
 
 //breakpoint
 $breakpoints: (
+  pc: "screen and (min-width:1200px)",
   tab: "screen and (max-width:1199px)",
   sp: "screen and (max-width:767px)",
 );
@@ -223,7 +224,9 @@ h3 {
       }
     }
     &:last-child, &:nth-last-child(2), &:nth-last-child(3) {
-      margin-bottom: 0;
+      @include media(pc) {
+        margin-bottom: 0;
+      }
     }
     &:last-child {
       @include media(tab) {
